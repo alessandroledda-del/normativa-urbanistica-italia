@@ -81,6 +81,11 @@ export const ChatInterface: React.FC = () => {
                               Comune: {src.metadata.commune}
                             </span>
                           )}
+                          {src.metadata.source && (
+                            <a href={src.metadata.source} target="_blank" rel="noreferrer" style={{ fontSize: '12px', padding: '4px 8px', backgroundColor: 'var(--bg-surface-hover)', borderRadius: '4px', color: 'var(--secondary)', textDecoration: 'none' }}>
+                              🔗 {src.metadata.title || 'Apri Link'}
+                            </a>
+                          )}
                         </div>
                         <p className="text-muted" style={{ fontSize: '13px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                           "{src.page_content}"
