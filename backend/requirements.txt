@@ -10,3 +10,4 @@ python-dotenv
 pdfplumber
 tiktoken
 duckduckgo-search
+langchain-community
