@@ -33,7 +33,9 @@ frontend_dist = os.path.join(os.path.dirname(BASE_DIR), "frontend", "dist")
 
 if os.path.exists(frontend_dist):
     # Serve i file statici (CSS, JS, immagini)
-    app.mount("/assets", StaticFiles(directory=os.path.join(frontend_dist, "assets")), name="assets")
+    assets_dir = os.path.join(frontend_dist, "assets")
+    if os.path.exists(assets_dir):
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
     
     # Catch-all route per servire l'index.html di React e per tutto quello che non inizia per /api/
     @app.get("/{full_path:path}")

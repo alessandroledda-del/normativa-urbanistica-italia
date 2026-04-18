@@ -7,13 +7,19 @@ function App() {
     <div className="app-container">
       {/* Sidebar - Admin & Context */}
       <aside className="sidebar">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '40px' }}>
-          <div style={{ padding: '8px', backgroundColor: 'var(--primary)', borderRadius: 'var(--radius-sm)', color: '#fff' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '40px' }}>
+          <div style={{ 
+            padding: '12px', 
+            background: 'linear-gradient(135deg, var(--primary), var(--secondary))', 
+            borderRadius: 'var(--radius-sm)', 
+            color: '#fff',
+            boxShadow: '0 4px 16px var(--primary-glow)'
+          }}>
             <Map size={24} />
           </div>
           <div>
-            <h1 style={{ fontSize: '18px', margin: 0 }}>AI Urbanistica</h1>
-            <span className="text-muted" style={{ fontSize: '12px' }}>Assistente Normativo RAG</span>
+            <h1 className="brand" style={{ fontSize: '22px', margin: 0, lineHeight: 1.2 }}>AI Urbanistica</h1>
+            <span className="text-muted" style={{ fontSize: '13px', display: 'block', marginTop: '2px' }}>Assistente Normativo Agentic</span>
           </div>
         </div>
 
